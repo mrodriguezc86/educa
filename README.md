@@ -28,12 +28,12 @@ Puedes probar la aplicación en este enlace:
    cd educa
 
 2. Instala las dependencias:
-  ```bash
-  npm install
+   ```bash
+   npm install
 
 3. Ejecuta el proyecto en modo desarrollo:
-  ```bash
-  npm run dev
+   ```bash
+   npm run dev
 
 ## 📌 Estado del proyecto
 🚧 Este proyecto está actualmente en desarrollo. Nuevas actividades y mejoras están en camino.
