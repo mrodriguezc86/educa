@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './add.module.scss' 
+import NumericKeyPad from './NumericKeyPad';
 
 const Add = () => {
 
@@ -26,14 +27,6 @@ const Add = () => {
         }
     };
 
-    const keyPressed = (key)=>{
-        if (key === 'clear') {
-            setUserAnswer(userAnswer.slice(0,-1));
-        } else if (key !== null) {
-            setUserAnswer(prev => prev + key);
-        }
-    }
-
     return (
         <div className="container d-flex justify-content-center align-items-center flex-column">
             <h2>Let's add</h2>
@@ -51,22 +44,7 @@ const Add = () => {
             </div>
             <div className="message">{message}</div>
             <div className='col-6 col-xs-5 col-sm-5 col-md-3 col-lg-2 col-xl-2'> 
-                {buttons.map((row, index) =>{
-                    return <div key={index} className={`row align-items-center`}>
-                        {row.map((key, index) => (
-                            <div key={`${key}-${index}`} className="col-4 g-0">
-                                {key!==null && 
-                                    <button 
-                                        aria-label={`Key ${key}`}
-                                        className={`btn border rounded ${styles.keyboardKey} w-100 py-3`}
-                                        onClick={()=>keyPressed(key)}>
-                                        {key}
-                                    </button>
-                                }
-                            </div>
-                        ))}
-                        </div>
-                })}
+                <NumericKeyPad keyPadValue={userAnswer} setKeyPadValue={setUserAnswer}/>
             </div>
         </div>
     );

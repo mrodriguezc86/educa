@@ -1,44 +1,40 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import styles from './numericKeyPad.module.scss';
 
-function NumericKeyPad() {
-  const [input, setInput] = useState('');
+function NumericKeyPad({keyPadValue, setKeyPadValue}) {
 
-  const handleClick = (value) => {
-    setInput((prev) => prev + value);
-  };
+    //const [keyPadValue, setKeyPadValue] = useState('');
 
-  const handleDelete = () => {
-    setInput((prev) => prev.slice(0, -1));
-  };
+    const buttons = [[1, 2, 3], [4, 5, 6], [7, 8, 9],[null, 0, 'clear']];
 
-  const handleClear = () => {
-    setInput('');
-  };
+    const changeValue = (key)=>{
+        if (key === 'clear') {
+            setKeyPadValue(keyPadValue.slice(0,-1));
+        } else if (key !== null) {
+            setKeyPadValue(prev => prev + key);
+        }
+    }
 
-  return (
-    <div className="max-w-xs mx-auto p-4 border rounded shadow">
-      <input
-        type="text"
-        value={input}
-        readOnly
-        className="form-control mb-3"
-      />
-      <div className="grid grid-cols-3 gap-2">
-        {[1,2,3,4,5,6,7,8,9].map((num) => (
-          <button
-            key={num}
-            onClick={() => handleClick(num.toString())}
-            className="btn btn-outline-primary"
-          >
-            {num}
-          </button>
-        ))}
-        <button onClick={handleClear} className="btn btn-outline-danger">C</button>
-        <button onClick={() => handleClick('0')} className="btn btn-outline-primary">0</button>
-        <button onClick={handleDelete} className="btn btn-outline-warning">⌫</button>
-      </div>
-    </div>
-  );
+    return (
+        <>
+        {buttons.map((row, index) =>{
+                        return <div key={index} className={`row align-items-center`}>
+                            {row.map((key, index) => (
+                                <div key={`${key}-${index}`} className="col-4 g-0">
+                                    {key!==null && 
+                                        <button 
+                                            aria-label={`Key ${key}`}
+                                            className={`btn border rounded ${styles.keyboardKey} w-100 py-3`}
+                                            onClick={()=>changeValue(key)}>
+                                            {key}
+                                        </button>
+                                    }
+                                </div>
+                            ))}
+                            </div>
+                    })}
+        </>
+    );
 }
 
 export default NumericKeyPad;
