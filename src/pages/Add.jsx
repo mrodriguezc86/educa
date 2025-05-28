@@ -13,8 +13,6 @@ const Add = () => {
     const [userAnswer, setUserAnswer] = useState('');
     const [message, setMessage] = useState('');
 
-    const buttons = [[1, 2, 3], [4, 5, 6], [7, 8, 9],[null, 0, 'clear']];
-
     const checkAnswer = () => {
         const correctAnswer = num1 + num2;
         if (parseInt(userAnswer) === correctAnswer) {
@@ -30,17 +28,17 @@ const Add = () => {
     return (
         <div className="container d-flex justify-content-center align-items-center flex-column">
             <h2>Let's add</h2>
-            <div className="problem">
+            <div className={styles.problem}>
                 {num1} + {num2} = ?
-            </div>
-            <div>
-            <input className='p-2 m-2 border border-2 rounded w-25'
+                <input className='p-2 m-2 border border-2 rounded w-25'
                 type="number"
                 inputMode='numeric'
                 value={userAnswer}
                 onChange={(e) => setUserAnswer(e.target.value)}
-            />
-            <button onClick={checkAnswer}>Check</button>
+                />
+            </div>
+            <div className='pb-3'>
+                <button onClick={checkAnswer}>Check</button>
             </div>
             <div className="message">{message}</div>
             <div className='col-6 col-xs-5 col-sm-5 col-md-3 col-lg-2 col-xl-2'> 

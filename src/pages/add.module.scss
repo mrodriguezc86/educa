@@ -1,13 +1,4 @@
 
-.keyboardKey{
-    border-right-width: thick !important;
-    border-bottom-width: thick !important;
-
-    &:hover{
-        border-color: #c1c5c9 !important;
-    }
-
-    &:active{
-        border-color: #238af1 !important;
-    }
-  }
+.problem{
+    width: 200px;
+}
