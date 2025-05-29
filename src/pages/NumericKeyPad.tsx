@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import styles from './numericKeyPad.module.scss';
 
-function NumericKeyPad({keyPadValue, setKeyPadValue}) {
+// Define the props type
+interface NumericKeyPadProps {
+    keyPadValue: string; 
+    setKeyPadValue: React.Dispatch<React.SetStateAction<string>>;
+  }
+
+function NumericKeyPad({keyPadValue, setKeyPadValue}: NumericKeyPadProps) {
 
     //const [keyPadValue, setKeyPadValue] = useState('');
 
-    const buttons = [[1, 2, 3], [4, 5, 6], [7, 8, 9],['Clear', 0, '←']];
+    const buttons = [['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9'],['Clear', '0', '←']];
 
-    const changeValue = (key)=>{
+    const changeValue = (key:string)=>{
         if (key === 'Clear') {
             setKeyPadValue('');
         }else if(key === '←'){
