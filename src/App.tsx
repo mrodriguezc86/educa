@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Add from './pages/Add'
 
 function App() {

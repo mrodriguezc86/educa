@@ -7,7 +7,7 @@ const Add = () => {
     const getRandomNumber = ()=>{
         return Math.floor(Math.random() * maxNumber);
     }
-    const [maxNumber, setMaxNumber] = useState(10);
+    const [maxNumber] = useState(10);
     const [num1, setNum1] = useState(getRandomNumber);
     const [num2, setNum2] = useState(getRandomNumber);
     const [userAnswer, setUserAnswer] = useState('');
