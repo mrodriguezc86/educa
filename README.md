@@ -1,48 +1,51 @@
 # Educa
 
-**Educa** es una aplicación web con ejercicios interactivos de matemáticas y lectura para niños de preescolar. Presenta una interfaz limpia y amigable, pensada especialmente para niños que están aprendiendo a sumar, a iniciarse en la multiplicación y a practicar lectura con *sight words*.
+**Educa** is a web application with interactive math and reading exercises for preschool children. It features a clean and friendly interface, specially designed for children learning addition, starting multiplication, and practicing reading with *sight words*.
 
-## ✨ Características
+## ✨ Features
 
-- Actividades de suma y multiplicación para preescolares.
-- Ejercicios de lectura con *sight words*.
-- Interfaz simple e intuitiva, pensada para el uso infantil.
-- Accesible desde cualquier navegador moderno.
+- Addition and multiplication activities for preschoolers.
+- Reading exercises with *sight words*.
+- Simple and intuitive interface designed for children.
+- Accessible from any modern browser.
 
-## 🚀 Demo en línea
+## 🚀 Online Demo
 
-Puedes probar la aplicación en este enlace:  
+You can try the application at this link:  
 🔗 [https://educa-861219.web.app/](https://educa-861219.web.app/)
 
-## 🛠️ Tecnologías utilizadas
+## 🛠️ Technologies Used
 
 - [Vite](https://vitejs.dev/)
 - [React](https://reactjs.org/)
 - [Bootstrap](https://getbootstrap.com/)
 
-## 📦 Instalación
+## 📦 Installation
 
-1. Clona este repositorio:
+1. Clone this repository:
    ```bash
-   git clone https://github.com/tu-usuario/educa.git
+   git clone https://github.com/your-username/educa.git
    cd educa
+   ```
 
-2. Instala las dependencias:
+2. Install dependencies:
    ```bash
    npm install
+   ```
 
-3. Ejecuta el proyecto en modo desarrollo:
+3. Run the project in development mode:
    ```bash
    npm run dev
+   ```
 
-## 📌 Estado del proyecto
-🚧 Este proyecto está actualmente en desarrollo. Nuevas actividades y mejoras están en camino.
+## 📌 Project Status
+🚧 This project is currently under development. New activities and improvements are on the way.
 
-## 🤝 Contribuciones
-Aunque no existe una guía formal de contribución, estás invitado a revisar el código y sugerir mejoras. Las contribuciones son bienvenidas.
+## 🤝 Contributions
+Although there is no formal contribution guide, you are welcome to review the code and suggest improvements. Contributions are welcome.
 
-## 📄 Licencia
-Este proyecto está licenciado bajo la MIT License.
-Puedes usar, modificar y distribuir el código con libertad, siempre que mantengas el aviso de copyright.
+## 📄 License
+This project is licensed under the MIT License.  
+You can freely use, modify, and distribute the code as long as you retain the copyright notice.
 
-Consulta el archivo LICENSE para más detalles.
+See the LICENSE file for more details.
